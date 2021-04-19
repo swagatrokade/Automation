@@ -189,6 +189,7 @@ header {
     background-size: auto;
     background-size: 100%;
 	cursor:default;
+	display:flex;
 }
 
     .tbs-post-thumbnail img {
@@ -423,11 +424,6 @@ blockquote.blockstyle {
         border-color: #fdb714
     }
 
-/*admin*/
-.tbs-p-edit {
-    padding: 0;
-    border: 1px solid #01b7f2;
-}
 
 @media only screen and (max-width: 1130px) {
     .tbs-p-det-content > .post-image .post-info {
@@ -463,6 +459,7 @@ blockquote.blockstyle {
     .tbs-p-det-content > .post-image .post-info {
         display: none;
     }
+	
 
     nav .toggle-collapse {
         width: 80% !important;

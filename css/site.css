@@ -1,0 +1,528 @@
+﻿@import url(https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,400;1,200&display=swap);
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #fff;
+}
+
+:root {
+    --white: #ffffff;
+    --midnight: #104f55;
+}
+
+a {
+    color: #000;
+}
+
+    a:hover, a:active, a:focus {
+        outline: 0;
+        text-decoration: none;
+    }
+
+.container {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.tbs-brand {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tbs-color{
+	background-color: #00b28f;
+}
+
+/*navigation*/
+
+header {
+    margin-bottom: 1rem;
+}
+
+.tbs-navbar {
+    min-height: 80px;
+    padding: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+	background-color: #fff;
+    border-bottom: 1px solid #dee2e6;
+}
+
+    .tbs-navbar ul li a {
+        list-style: none;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 1rem;
+        border-bottom: 3px solid transparent;
+    }
+
+        .tbs-navbar ul li a:hover {
+            border-bottom: 3px solid #1162fb;
+            color: #1162fb;
+            font-weight: 500;
+            transition: background .3s ease;
+        }
+
+.tbs-s-wrap {
+    position: relative;
+    border-bottom: 2px solid #000;
+}
+
+.tbs-s-input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    font-size: 19px;
+    display: block;
+    padding: 0 2px;
+    border-color: transparent;
+    outline: none;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+}
+
+.tbs-s-span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+    .tbs-s-span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        background: #d5007d;
+        background: -webkit-linear-gradient(45deg, blue, #1162fb);
+        background: -o-linear-gradient(45deg, blue, #1162fb);
+        background: -moz-linear-gradient(45deg, blue, #1162fb);
+        background: linear-gradient(45deg, blue, #1162fb);
+    }
+
+
+.tbs-s-input:focus + .tbs-s-span::before {
+    width: 100%;
+}
+
+.has-val.tbs-s-input + .tbs-s-span::before {
+    width: 100%;
+}
+
+.tbs-l-text {
+    border-bottom: 3px solid #000;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+    .tbs-l-text:hover {
+        border-bottom: 3px solid #1162fb;
+    }
+
+.tbs-l-link {
+    padding: 25px 0;
+    text-align: center;
+}
+
+    .tbs-l-link a {
+        border-bottom: solid 1px #000;
+        font-size: 18px;
+        color: #000;
+        display: inline-block;
+    }
+
+        .tbs-l-link a:hover {
+            color: #1162fb;
+            text-decoration: none;
+            outline: none;
+        }
+
+/*post partial*/
+.tbs-p-wrap {
+    width: 31.33%;
+    margin: 1%;
+    overflow: hidden;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 18px 0px, rgba(0, 0, 0, 0.07) 0px 3px 5px -1px;
+    cursor: pointer;
+	border: 2px solid #fff;
+}
+
+    .tbs-p-wrap:hover {
+        transition: .4s ease-in-out;
+        text-decoration: none;
+        box-shadow: 0 3px 16px 0 rgba(0,0,0,.11);
+    }
+
+.tbs-post-thumbnail {
+    width: 100%;
+    height: 230px;
+    float: left;
+    background-size: auto;
+    background-size: 100%;
+	cursor:default;
+}
+
+    .tbs-post-thumbnail img {
+        width: 100%;
+        height: auto
+    }
+
+.tbs-p-title {
+    padding: 0 2%;
+    overflow: hidden;
+    text-align: center;
+    color: #000;
+	
+    background-color:lightgray;
+    font-weight: 400;
+    height: 150px;
+    text-align: center;
+    outline: none;
+}
+
+    .tbs-p-title h2 {
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin: 10px 0;
+        height: 150px;
+        outline: none;
+        text-decoration: none;
+    }
+
+        .tbs-p-title h2:hover {
+            color: #1162fb;
+        }
+
+.tbs-p-det {
+    width: 100%;
+    font-size: 12px;
+}
+
+.tbs-p-auth {
+    position: relative;
+    top: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tbs-p-auth-det {
+    padding: 0 5px;
+}
+
+    .tbs-p-auth-det h6, .tbs-p-auth-det span {
+        letter-spacing: 0px;
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .tbs-p-auth-det h6 {
+        margin-bottom: 0.2rem;
+    }
+
+        .tbs-p-auth-det h6:hover {
+            color: #1162fb;
+            cursor: pointer;
+        }
+
+.tbs-p-auth-img {
+    max-width: 45px;
+    margin-right: 10px;
+}
+
+    .tbs-p-auth-img img {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #fff;
+        border-radius: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+        .tbs-p-auth-img img:hover {
+            border: 2px solid #1162fb !important;
+            cursor: pointer;
+        }
+
+/*post detials*/
+.tbs-p-det-wrap {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    float: none;
+    margin: 0 auto;
+}
+
+.tbs-p-det-content {
+    width: 100%;
+}
+
+    .tbs-p-det-content .post-image, .post-title {
+        padding-top: 2rem;
+    }
+
+.tbs-p-det-ruler {
+    display: flex;
+    justify-content: center;
+}
+
+.tbs-p-det-tag {
+    padding: 0.2rem;
+}
+
+    .tbs-p-det-tag .tbs-p-det-date {
+        font-size: 14px;
+        background: #FFC300;
+        color: #fff;
+        padding: .3em .5em;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+        .tbs-p-det-tag .tbs-p-det-date:hover {
+            color: #1162fb;
+            transition: all 1s ease;
+        }
+
+.tbs-p-det-content .post-image div {
+    overflow: hidden;
+}
+
+.tbs-p-det-content .post-image .img {
+    width: 100%;
+    transition: all 1s ease;
+}
+
+.footer {
+    height: 100%;
+    background-color: #000;
+    position: relative;
+    color: white;
+}
+
+    .footer li {
+        padding-top: 0.5rem;
+    }
+
+        .footer li:first-child {
+            padding-top: 0;
+        }
+
+	.footer a {
+		color: #fff;
+	}
+	
+	.footer a:hover {
+		color: #1162fb;
+	}
+
+.tbs-foot-copy {
+    overflow: hidden;
+    text-align: center;
+}
+
+
+blockquote.container {
+    margin-top: 200px
+}
+
+blockquote {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    padding: 20px 20px 20px 40px;
+    border-left: none;
+    position: relative;
+    text-indent: -19px
+}
+
+section#block_content {
+    text-align: left
+}
+
+blockquote p {
+    font-size: 1em
+}
+
+blockquote:before,
+blockquote:after {
+    font-family: Arial, serif;
+    font-size: 2.5em;
+    vertical-align: middle;
+    line-height: 0
+}
+
+blockquote:before {
+    content: open-quote;
+    margin-right: 4px
+}
+
+blockquote:after {
+    content: close-quote;
+    margin-left: 3px
+}
+
+blockquote.blockstyle,
+blockquote.style2 {
+    background: #fff;
+    font-style: italic
+}
+
+    blockquote.blockstyle p,
+    blockquote.style2 p {
+        display: inline
+    }
+
+blockquote.blockstyle {
+    border-left: 3px solid #f0715f;
+    position: relative
+}
+
+    blockquote.blockstyle:before,
+    blockquote.blockstyle:after {
+        color: #f0715f
+    }
+
+    blockquote.blockstyle.border-color-blue {
+        border-color: #01b7f2
+    }
+
+    blockquote.blockstyle.border-color-yellow {
+        border-color: #fdb714
+    }
+
+/*admin*/
+.tbs-p-edit {
+    padding: 0;
+    border: 1px solid #01b7f2;
+}
+
+@media only screen and (max-width: 1130px) {
+    .tbs-p-det-content > .post-image .post-info {
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .sidebar .popular-post .post-info {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .nav .nav-menu, .nav .nav-items {
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse {
+        display: initial;
+    }
+
+    main .site-content {
+        grid-template-columns: 100%;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    main .blog {
+        height: 125vh;
+    }
+
+    .tbs-p-det-content > .post-image .post-info {
+        display: none;
+    }
+
+    nav .toggle-collapse {
+        width: 80% !important;
+    }
+
+    .tag {
+        top: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card-left {
+        width: 100%;
+        padding: 40px 30px 10px 30px
+    }
+
+    .card-right {
+        width: 100%
+    }
+
+    .right {
+        margin-top: 100px !important;
+        margin-bottom: 100px !important
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px !important
+    }
+
+    .card-right {
+        padding: 50px
+    }
+
+    .right {
+        margin-top: 50px !important;
+        margin-bottom: 50px !important
+    }
+}
+
+@media screen and (max-width:1300px) and (min-width:750px) {
+    .tbs-p-wrap {
+        width: 48%
+    }
+}
+
+@media screen and (max-width:749px) {
+    .tbs-p-wrap {
+        width: 97%;
+    }
+
+    .post-thumbnail {
+        height: auto
+    }
+}
+
+@media screen and (max-width:749px) and (min-width:415px) {
+    .tbs-p-title h2 {
+        height: 120px
+    }
+}
